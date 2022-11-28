@@ -24,7 +24,22 @@ section {
 
 h2 {
   font-size: 2.5em;
+  font-weight: 750;
+}
+
+h3 {
+  font-size: 1.8em;
   font-weight: 700;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+h6 {
+  color: gray;
+  font-size: 0.8em;
 }
 
 article {
@@ -36,9 +51,18 @@ article {
   padding: 30px 20px;
 }
 
+article > div img {
+  width: 50px;
+}
+
 article.weather-tap > div,
 article.designers-tap > div {
   flex: 1 1 0;
+}
+
+article.weather-tap > div:first-child {
+  display: flex;
+  align-items: center;
 }
 
 article.weather-tap > div:last-child {
@@ -57,6 +81,10 @@ article.weather-tap > div.weather-tap-content > div {
   padding: 30px 20px;
 }
 
+article.weather-tap > div.weather-tap-content > div > div {
+  white-space: nowrap;
+}
+
 article.weather-tap > div.weather-tap-content > div > div:first-child {
   display: flex;
   flex-direction: column;
@@ -68,7 +96,16 @@ article.weather-tap > div.weather-tap-content > div > div:last-child {
   align-items: center;
 }
 
-article.designers-tap > div:first-child {
+article.weather-tap > div.weather-tap-content > div > div:last-child h2 {
+  margin-left: 10px;
+}
+
+article.designers-tap > div:first-child div {
+  text-align: center;
+}
+
+article.designers-tap > div:first-child > div:last-child {
+  margin-bottom: 30px;
 }
 
 article.designers-tap > div:last-child {
@@ -93,11 +130,61 @@ article.designers-tap > div.designers-tap-content > div {
 }
 
 article.designers-tap > div.designers-tap-content > div > img {
-  width: 30px;
+  width: 60px;
+  fill: blue;
 }
 
 article.friends-tap {
   background-color: rgb(255, 189, 17);
+}
+
+article.friends-tap > div:first-child {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+article.friends-tap > div:first-child > div:first-child {
+  position: absolute;
+  left: 0;
+}
+
+article.friends-tap > div:nth-child(2) {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 20px 0px;
+  color: gray;
+}
+
+article.friends-tap > div:nth-child(2) img {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 30px;
+}
+
+article.friends-tap > div.friends-tap-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+article.friends-tap > div.friends-tap-profile > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 10px 0px;
+  padding: 15px;
+  background-color: white;
 }
 
 button.btn-done {
@@ -109,4 +196,23 @@ button.btn-done {
   height: 50px;
   border-radius: 15px;
   background-color: dodgerblue;
+}
+
+button.btn-invite,
+button.btn-invited {
+  font-size: 0.8em;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 30px;
+}
+
+button.btn-invite {
+  background-color: rgb(255, 189, 17);
+}
+
+button.btn-invited {
+  color: white;
+  background-color: rgb(83, 60, 0);
 }
